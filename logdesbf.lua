@@ -41,7 +41,7 @@ spawn(function()
                 if vampireFangCount > 0 then
                     data = "VF x" .. tostring(vampireFangCount)
                 else
-                    data = data .. " | DF x" .. tostring(darkFragmentCount)
+                    data = "VF x" .. tostring(vampireFangCount)
                 end
 
                 -- เช็คและรวมข้อมูลของ Leviathan Heart
