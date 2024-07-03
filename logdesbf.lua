@@ -1,8 +1,42 @@
 spawn(function()
     while true do
         pcall(function()
-            Req = (syn and syn.request) or request or (http and http.request) or http_request
+            local Req = (syn and syn.request) or request or (http and http.request) or http_request
 
+            -- ฟังก์ชันสำหรับดึงข้อมูล Beli ของ LocalPlayer
+            function GetLocalPlayerBeli()
+                local player = game.Players.LocalPlayer
+                local beliCount = 0
+                if player:FindFirstChild("Data") and player.Data:FindFirstChild("Beli") then
+                    beliCount = player.Data.Beli.Value
+                end
+                return beliCount
+            end
+
+            -- ฟังก์ชันสำหรับดึงข้อมูล Fragments ของ LocalPlayer
+            function GetLocalPlayerFragments()
+                local player = game.Players.LocalPlayer
+                local fragmentsCount = 0
+                if player:FindFirstChild("Data") and player.Data:FindFirstChild("Fragments") then
+                    fragmentsCount = player.Data.Fragments.Value
+                end
+                return fragmentsCount
+            end
+
+            -- ฟังก์ชันสำหรับแปลงจำนวน Beli/Fragments ให้เป็นตัวย่อ
+            function AbbreviateNumber(num)
+                if num >= 1000000000 then
+                    return string.format("%.2fb", num / 1000000000)
+                elseif num >= 1000000 then
+                    return string.format("%.2fm", num / 1000000)
+                elseif num >= 1000 then
+                    return string.format("%.2fk", num / 1000)
+                else
+                    return tostring(num)
+                end
+            end
+
+            -- ฟังก์ชันสำหรับดึงข้อมูลจำนวนของวัสดุ
             function GetItemCount(itemName)
                 local inventory = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
                 local itemCount = 0
@@ -33,68 +67,50 @@ spawn(function()
             end
 
             -- ฟังก์ชันสำหรับส่งข้อมูล
-            function SendItemData()
-                local data = ""
+            function SendPlayerData()
+                local playerName = game.Players.LocalPlayer.Name
 
-                -- เช็คและรวมข้อมูลของ Vampire Fang
+                -- ดึงข้อมูลต่างๆ
+                local beliCount = GetLocalPlayerBeli()
+                local fragmentsCount = GetLocalPlayerFragments()
+
+                -- ดึงข้อมูลจำนวนวัสดุ
                 local vampireFangCount = GetItemCount("Vampire Fang")
-                if vampireFangCount > 0 then
-                    data = "VF x" .. tostring(vampireFangCount)
-                else
-                    data = "VF x" .. tostring(vampireFangCount)
-                end
-
-                -- เช็คและรวมข้อมูลของ Leviathan Heart
                 local leviathanHeartCount = GetItemCount("Leviathan Heart")
-                if leviathanHeartCount > 0 then
-                    data = data .. " | LH x" .. tostring(leviathanHeartCount)
-                else
-                    data = data .. " | DF x" .. tostring(darkFragmentCount)
-                end
-
-                -- เช็คและรวมข้อมูลของ Dark Fragment
                 local darkFragmentCount = GetItemCount("Dark Fragment")
-                if darkFragmentCount > 0 then
-                    data = data .. " | DF x" .. tostring(darkFragmentCount)
-                else
-                    data = data .. " | DF x" .. tostring(darkFragmentCount)
-                end
+                local demonicwispCount = GetItemCount("Demonic Wisp")
 
                 -- เช็คว่ามี Shark Anchor หรือไม่
                 local hasSharkAnchor = CheckWeapons("Shark Anchor")
-                if hasSharkAnchor then
-                    data = data .. " | Shark Anchor✅"
-                else
-                    data = data .. " | Shark Anchor❌"
-                end
 
                 -- เช็คว่ามี Sanguine Art หรือไม่
                 local hasSanguineArt = HasSanguineArt()
-                if hasSanguineArt then
-                    data = data .. " | SA✅"
-                else
-                    data = data .. " | SA❌"
-                end
 
-                -- เพิ่มการเช็คดาบอื่น ๆ ตามต้องการ
                 -- เช็คว่ามีดาบชื่ออื่น ๆ และรวมลงในข้อมูล
                 local hasOtherSword = CheckWeapons("Cursed Dual Katana")
-                if hasOtherSword then
-                    data = data .. " | CDK✅"
-                else
-                    data = data .. " | CDK❌"
-                end
+
+                -- สร้างข้อมูลในรูปแบบที่ต้องการ
+                local data =      "B •" .. AbbreviateNumber(beliCount)
+                data = data .. " | F •" .. AbbreviateNumber(fragmentsCount)
+                data = data .. " | VF x" .. tostring(vampireFangCount)
+                data = data .. " | LH x" .. tostring(leviathanHeartCount)
+                data = data .. " | DF x" .. tostring(darkFragmentCount)
+                data = data .. " | DW x" .. tostring(demonicwispCount)
+                data = data .. " | SA" .. (hasSharkAnchor and "✅" or "❌")
+                data = data .. " | SAT" .. (hasSanguineArt and "✅" or "❌")
+                data = data .. " | CDK" .. (hasOtherSword and "✅" or "❌")
+
 
                 -- ส่งข้อมูลไปยังเซิร์ฟเวอร์
                 Req({
                     Method = "POST",
-                    Url = "http://localhost:7963/SetDescription?Account=" .. game.Players.LocalPlayer.Name,
+                    Url = "http://localhost:7963/SetDescription?Account=" .. playerName,
                     Body = data
                 })
             end
 
             -- เรียกใช้ฟังก์ชันสำหรับส่งข้อมูล
-            SendItemData()
+            SendPlayerData()
         end)
 
         -- รอเวลา 5 วินาที
