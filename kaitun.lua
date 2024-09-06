@@ -1,17 +1,6 @@
 
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
-_G.LogsDes = {
-    ["Enabled"] = false, -- เปิดการใช้งาน
-    ["SendAlias"] = false, -- เปิดการส่ง Alias
-    ["SendDescription"] = false, -- เปิดการส่ง Des
-    ["DelaySend"] = 5 -- วินาที
-}
-_G.WebHook = {
-    ["Enabled"] = false, -- เปิดการใช้งาน
-    ["Url"] = "", -- ลิ้งค์เว็บฮุก
-    ["Delay"] = 60 -- วินาที
-}
 _G.MainSettings = {
         ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
@@ -31,7 +20,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
     ['Main_Fruits'] = {'Dough-Dough','Kitsune-Kitsune',}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Magma-Magma"} -- กินหรือซื้อตอนไม่มีผล
+ ['Select_Fruits'] = {"Light-Light","Sound-Sound", "Magma-Magma", "Sand-Sand",}
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -49,11 +38,11 @@ _G.Races_Settings = { -- ตั้งค่าเผ่า
         ["v3"] = true,
         ["Races_Lock"] = {
             ["Races"] = { -- Select Races U want
-                ["Mink"] = false,
-                ["Human"] = false,
+                ["Mink"] = true,
+                ["Human"] = true,
                 ["Fishman"] = true
             },
-            ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
+            ["RerollsWhenFragments"] = 60000 -- Random Races When Your Fragments is >= Settings
         }
     }
 }
