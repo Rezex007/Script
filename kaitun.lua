@@ -20,7 +20,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
     ['Main_Fruits'] = {'Dough-Dough','Kitsune-Kitsune',}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
- ['Select_Fruits'] = {"Light-Light","Sound-Sound", "Magma-Magma", "Sand-Sand",}
+ ['Select_Fruits'] = {"Sound-Sound", "Leopard-Leopard",}
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
