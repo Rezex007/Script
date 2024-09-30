@@ -42,7 +42,7 @@ _G.Races_Settings = { -- ตั้งค่าเผ่า
                 ["Human"] = true,
                 ["Fishman"] = true
             },
-            ["RerollsWhenFragments"] = 60000 -- Random Races When Your Fragments is >= Settings
+            ["RerollsWhenFragments"] = 6000000 -- Random Races When Your Fragments is >= Settings
         }
     }
 }
