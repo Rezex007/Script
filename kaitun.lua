@@ -19,7 +19,7 @@ _G.MainSettings = {
 }      
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Dough-Dough','Kitsune-Kitsune','Buddha-Buddha', 'Leopard-Leopard','Mammoth-Mammoth','Venom-Venom','T-Rex-T-Rex','Rumble-Rumble','Dark-Dark','Spirit-Spirit'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Main_Fruits'] = {'Dough-Dough','Kitsune-Kitsune','Buddha-Buddha', 'Leopard-Leopard','Mammoth-Mammoth','Venom-Venom','T-Rex-T-Rex','Rumble-Rumble','Spirit-Spirit'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
  ['Select_Fruits'] = {"Buddha-Buddha", "Leopard-Leopard","Mammoth-Mammoth","Venom-Venom","T-Rex-T-Rex","Rumble-Rumble","Dark-Dark","Spirit-Spirit"}
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
