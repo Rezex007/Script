@@ -1,8 +1,10 @@
 script_key = "HxSRRMMOcWcSgEVQhlvoZQddCnRrfjgh"
-getgenv().SetFpsCap = false 
-getgenv().FpsCap = 30
-    getgenv().UiCheckItems = false
-    getgenv().WhiteScreen = false
+getgenv().SetFpsCap = false
+getgenv().FpsCap = 10
+getgenv().OneClickUi = true -- Only Open Necessacry Ui For One Click
+getgenv().FpsBoost1 = true
+    getgenv().WhiteScreen = true
+    getgenv().UiCheckItems = true
     getgenv().OneClickSetting = {
         Enable=true,
         UnlimitGetQuest=true,
@@ -11,7 +13,15 @@ getgenv().FpsCap = 30
         RedeemCode=true,
         Sea2KeyHop=true,
         FruitEat = { --Priority, Name, 
-            [1] = {'Dough-Dough','Kitsune-Kitsune','Buddha-Buddha', 'Leopard-Leopard','Mammoth-Mammoth','Venom-Venom','T-Rex-T-Rex','Rumble-Rumble','Spirit-Spirit'},
+[1] = {"Spirit-Spirit"},
+[2] = {"Dough-Dough"},
+[3] = {"Kitsune-Kitsune"},
+[4] = {"Gas-Gas"},
+[5] = {"Leopard-Leopard"},
+[6] = {"Mammoth-Mammoth"},
+[7] = {"Venom-Venom"},
+[8] = {"T-Rex-T-Rex"},
+[9] = {"Rumble-Rumble"},
         },
         EatFruitFromStorage = true,
         SnipeFruit = true,
@@ -22,15 +32,14 @@ getgenv().FpsCap = 30
         HopValkyriehelm = false,
         HopMirrorFractal=false,
         FarmPole = false, -- Turn off If Want Focus Level
-        FarmItems = true, --Turn off If Want Focus Level And CDK, THis Only get After You Get God Human
-        DisableSoulGuitar = true,
+        FarmItems = false, --Turn off If Want Focus Level And CDK, THis Only get After You Get God Human
+        DisableSoulGuitar = false,
         DisableCDK = false,
-        DisableRaceEvolve = true,
-         RollRace={
-            Enable = false,
-            Races = {"Mink","Fishman","Human","Skypiea"}
-        },
-       MinFragment = 200000, --Farm After Max Level
+
+    }
+    getgenv().OneClickFarms = {
+        ["Shark Anchor"] = true,
     }
 getgenv().Team = "Pirates"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vinhuchi/rblx/main/W-azure/BloxFruit/OneClickLoader.lua"))()
+getgenv().AutoLoad = false --Will Load Script On Server Hop
+ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
