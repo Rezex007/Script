@@ -2,7 +2,7 @@
 repeat task.wait() until game:IsLoaded()
 getgenv().Hermanos_Settings = {
 	['key'] = '043b3678-97b8-48e6-b97f-f7b52abec036',
-	['PC'] = 'DDC-1',
+	['PC'] = 'xxx',
 
 	['webhooks'] = {
 		['fullmoon'] = 'https://discord.com/api/webhooks/',
