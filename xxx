@@ -1,0 +1,3 @@
+_G.Key = "VWS2U-2V656-0Q1WX"
+_G.DiscordId = "887696519006941225"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Natsuhanaki/Royx_PC/main/loader.lua"))();
