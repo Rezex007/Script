@@ -1,0 +1,133 @@
+getgenv().ConfigsKaitun = {
+	["Stack Plant"] = true,
+	["Low Cpu"] = true,
+	
+	["Summer Harvest Event"] = true,
+	
+	["Limit Tree"] = { -- จำกัดจำนวนต้นไม้
+		["Limit"] = 400, -- ถ้าต้นไม่ถึงที่ตั้งไว้
+		["Sell Untill"] = 350 -- มันจะขายจนเหลือที่ตั้งตรงนี้
+	},
+
+	["Seed"] = {
+		["Mode"] = "Auto", -- Custom , Auto
+		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
+			"Carrot",
+			"Bamboo",
+			"Pumpkin",
+			"Daffodil",
+			"Orange Tulip",
+			"Watermelon",
+			"Mushroom",
+			"Nightshade",
+			"Beanstalk",
+		}
+	},
+	
+	["Craft Event"] = {
+		"Crafters Seed Pack",
+		"Anti Bee Egg",
+		"Mutation Spray Choc",
+		"Mutation Spray Shocked"
+	},
+	
+	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
+		"Flower Seed Pack",
+		--"Nectarine",
+		--"Hive Fruit",
+		--"Honey Sprinkler",
+		"Bee Egg",
+		--"Bee Crate",
+	},
+	
+	["Gear Shop"] = {
+		"Master Sprinkler",
+		"Godly Sprinkler",
+		"Advanced Sprinkler",
+		"Lightning Rod"
+
+	},
+	["Gear Lock"] = {
+	      "Master Sprinkler",
+		"Godly Sprinkler",
+		"Advanced Sprinkler",
+		"Lightning Rod",
+                                 "Honey Sprinkler",
+		"Mutation Spray Choc",
+		"Mutation Spray Shocked",
+                 "Chocolate Sprinkler"
+	},
+
+	["Eggs"] = {
+		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
+			"Anti Bee Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Mythical Egg",
+		},
+		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
+			"Anti Bee Egg"
+		}
+	},
+	
+	["Limit Upgrade Slot"] = 1, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
+	["Equip When Done"] = { -- จะให้มันใส่สัตว์อะไรหลังจากปลดอันบนเสร็จเเล้ว
+		"Blood Kiwi",
+		"Chicken"
+	},
+
+	["Webhook"] = {-- webhook เเจ้งเตือน ถ้าได้สัตว์ใน Noti Pets หรือพวกที่มี Noti อื่นๆ
+		UrlPet = "https://discord.com/api/webhooks/1387479706370052206/iRywK3-YBTHG7jj151Kwi5vok1o3ULmwXHDgHysMKI8SgKZDoWDBBBRqW3cSFsAFzuWu",
+		UrlSeed = "https://discord.com/api/webhooks/1387479774707843203/jBxXHA-iEU7ME6seoAj0Fr5hf_geY7Xb3FTRQKxv3CUl_Q2uZPdejxeoY_VKYEBM1gkf",
+		PcName = "36/72bo"
+	},
+	["Noti Seeds"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
+		"Sunflower",
+		"Dragon Pepper",
+                "Moon Blossom",
+		"Elephant Ears",
+	},
+	["Lock Seeds"] = { -- มันจะไม่ใช้ seed ที่เลือก
+		"Sunflower",
+		"Dragon Pepper",
+		"Elephant Ears",
+		"Rosy Delight",
+		"Parasol Flower",
+		"Cocovine",
+		"Bendboo",
+		"Violet Corn",
+		"Succulent",
+		"Crocus",
+	},
+	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
+		"Idk"
+	},
+	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
+		"Flower Seed Pack",
+	},
+	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
+		"Disco Bee",
+		"Butterfly",
+		"Mimic Octopus",
+		"Scarlet Macaw",
+		"Queen Bee",
+		"Dragonfly",
+		"Raccoon",
+		"Red Fox",
+	},
+	["Lock Pets"] = { -- สัตว์ที่จะเก็บไว้ไม่ขายไม่เอาไปเเลก slot
+		"Disco Bee",
+		"Butterfly",
+		"Mimic Octopus",
+		"Scarlet Macaw",
+		"Queen Bee",
+		"Dragonfly",
+		"Raccoon",
+		"Red Fox", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
+		["Chicken"] = 5, -- ใส่เเบบนี้ได้หมายความว่า limit มีได้ 5 ตัว
+	}
+}
+License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
