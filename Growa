@@ -1,122 +1,151 @@
-
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
 	
-	["Summer Harvest Event"] = true,
-	
-	["Limit Tree"] = { -- จำกัดจำนวนต้นไม้
-		["Limit"] = 400, -- ถ้าต้นไม่ถึงที่ตั้งไว้
-		["Sell Untill"] = 350 -- มันจะขายจนเหลือที่ตั้งตรงนี้
+	["Limit Tree"] = {
+		["Limit"] = 400,
+		["Destroy Untill"] = 350,
+		
+		["Safe Tree"] = {
+			"Moon Blossom"
+		}
 	},
 
-	["Seed"] = {
-		["Mode"] = "Auto", -- Custom , Auto
-		["Custom"] = { -- ถ้าปรับเป็น custom มันจะซื้อเเค่ที่ใส่ในด้านล่าง
-			"Carrot",
-			"Bamboo",
-			"Pumpkin",
-			"Daffodil",
-			"Orange Tulip",
-			"Watermelon",
-			"Mushroom",
-			"Nightshade",
-			"Beanstalk",
+	Seed = {
+		Buy = {
+			Mode = "Auto", -- Custom , Auto
+			Custom = {
+				"Carrot",
+				"Bamboo",
+				"Pumpkin",
+				"Daffodil",
+				"Orange Tulip",
+				"Watermelon",
+				"Mushroom",
+				"Nightshade",
+				"Beanstalk",
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
+				"Carrot"
+			},
+			Lock = {
+				"Sunflower",
+				"Elephant Ears",
+				"Dragon Pepper",
+				"Moon Blossom",
+			}
 		}
 	},
 	
-	["Craft Event"] = {
-		"Crafters Seed Pack",
-		"Anti Bee Egg",
-		"Mutation Spray Choc",
-		"Mutation Spray Shocked"
+	["Seed Pack"] = {
+		Locked = {
+			
+		}
 	},
 	
-	["Event Shop"] =  { -- จะให้ซื้ออะไรบ้างจาก event shop อยากได้อันไหนเพิ่ม เอา -- ออก
-		"Flower Seed Pack",
-		--"Nectarine",
-		--"Hive Fruit",
-		--"Honey Sprinkler",
-		"Bee Egg",
-		--"Bee Crate",
+	Events = {
+		["Summer Harvest"] = {
+			["Do At Money"] = 1000000,
+			["Point Limit"] = 14000,
+		},
+		Craft = {
+			"Crafters Seed Pack",
+			"Anti Bee Egg"
+		},
+		Shop = {
+			--"Traveler's Fruit",
+			"Summer Seed Pack",
+			"Hamster",
+			"Oasis Egg",
+			--"Delphinium",
+			"Lily of the Valley",
+		}
 	},
 	
-	["Gear Shop"] = {
-		"Master Sprinkler",
-		"Godly Sprinkler",
-		"Advanced Sprinkler",
-		"Lightning Rod"
+	Gear = {
+		Buy = { 
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler"
+		},
+		Lock = {
 
+		},
 	},
-	["Gear Lock"] = {
 
-                 "Chocolate Sprinkler"
-	},
-
-	["Eggs"] = {
-		["Hatch"] = { -- มันจะสุ่มไขซื้อไข่วางไข่ เรียงจากบนลงล่างก่อน
+	Eggs = {
+		Place = {
 			"Anti Bee Egg",
+			"Oasis Egg",
 			"Paradise Egg",
-			"Bee Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
+			"Uncommon Egg"
 		},
-		["Safe Eggs"] = { -- จะไม่วางหรือฟักไข่ให้
-			"Anti Bee Egg"
+		Buy = {
+			"Paradise Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Mythical Egg",
 		}
 	},
 	
-	["Limit Upgrade Slot"] = 1, -- เป็นการปลด ค่าสูงสุดของการวางไข่เเละใช้สัตว์ (สูงสุด 5)
-	["Equip When Done"] = { -- จะให้มันใส่สัตว์อะไรหลังจากปลดอันบนเสร็จเเล้ว
-		"Blood Kiwi",
-		"Chicken"
+	Pets = {
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				"Blood Kiwi",
+				"Chicken"
+			},
+			["Limit Upgrade"] = 2,
+			["Equip When Done"] = {
+				"Blood Kiwi",
+				"Chicken"
+			},
+		},
+		Locked = {
+			"Disco Bee",
+			"Butterfly",
+			"Mimic Octopus",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Red Fox",
+			"Fennec Fox",
+			["Chicken"] = 5,
+		}
 	},
 
-	["Webhook"] = {-- webhook เเจ้งเตือน ถ้าได้สัตว์ใน Noti Pets หรือพวกที่มี Noti อื่นๆ
+	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1387479706370052206/iRywK3-YBTHG7jj151Kwi5vok1o3ULmwXHDgHysMKI8SgKZDoWDBBBRqW3cSFsAFzuWu",
 		UrlSeed = "https://discord.com/api/webhooks/1387479774707843203/jBxXHA-iEU7ME6seoAj0Fr5hf_geY7Xb3FTRQKxv3CUl_Q2uZPdejxeoY_VKYEBM1gkf",
-		PcName = "36/72bo"
+		PcName = "36/72bo",
+		
+		Noti = {
+			Seeds = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Blossom"
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
+				"Fennec Fox",
+			},
+		}
 	},
-	["Noti Seeds"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
-		"Sunflower",
-		"Dragon Pepper",
-                "Moon Blossom",
-		"Elephant Ears",
-	},
-	["Lock Seeds"] = { -- มันจะไม่ใช้ seed ที่เลือก
-		"Sunflower",
-		"Dragon Pepper",
-		"Elephant Ears",
-       "Moon Blossom"
-	},
-	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
-		"Idk"
-	},
-	["Lock Seed Packs"] = { -- มันจะไม่เปิด Seed pack นั้นๆให้
-		"Flower Seed Pack",
-	},
-	["Noti Pets"] = { -- สัตว์ที่จะให้มันเเจ้งเตือนใน webhook
-		"Disco Bee",
-		"Butterfly",
-		"Mimic Octopus",
-		"Scarlet Macaw",
-		"Queen Bee",
-		"Dragonfly",
-		"Raccoon",
-		"Red Fox",
-	},
-	["Lock Pets"] = { -- สัตว์ที่จะเก็บไว้ไม่ขายไม่เอาไปเเลก slot
-		"Disco Bee",
-		"Butterfly",
-		"Mimic Octopus",
-		"Scarlet Macaw",
-		"Queen Bee",
-		"Dragonfly",
-		"Raccoon",
-		"Red Fox", -- ใส่เเบบนี้หมายความว่า เก็บหมดไม่มี limit
-		["Chicken"] = 5, -- ใส่เเบบนี้ได้หมายความว่า limit มีได้ 5 ตัว
-	}
 }
 License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/98vt13x1h979yxngcvxbkjsq8hsw9rpw.lua"))()
