@@ -1,3 +1,4 @@
+
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
@@ -48,13 +49,7 @@ getgenv().ConfigsKaitun = {
 
 	},
 	["Gear Lock"] = {
-	      "Master Sprinkler",
-		"Godly Sprinkler",
-		"Advanced Sprinkler",
-		"Lightning Rod",
-                                 "Honey Sprinkler",
-		"Mutation Spray Choc",
-		"Mutation Spray Shocked",
+
                  "Chocolate Sprinkler"
 	},
 
@@ -93,13 +88,7 @@ getgenv().ConfigsKaitun = {
 		"Sunflower",
 		"Dragon Pepper",
 		"Elephant Ears",
-		"Rosy Delight",
-		"Parasol Flower",
-		"Cocovine",
-		"Bendboo",
-		"Violet Corn",
-		"Succulent",
-		"Crocus",
+       "Moon Blossom"
 	},
 	["Noti Seed Packs"] = { -- ที่จะให้มันเเจ้งเตือนใน webhook
 		"Idk"
