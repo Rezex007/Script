@@ -1,11 +1,11 @@
 getgenv().ConfigsKaitun = {
 	["Low Cpu"] = true,
 	
-	["Rejoin When Update"] = true,
+	["Rejoin When Update"] = false,
 
 	["Limit Tree"] = {
 		["Limit"] = 250,
-		["Destroy Untill"] = 200,
+		["Destroy Untill"] = 150,
 
 		["Safe Tree"] = {
 			"Moon Blossom"
@@ -53,19 +53,19 @@ getgenv().ConfigsKaitun = {
 		["Traveling Shop"] = {
 			"Bald Eagle",
 			"Night Staff",
-            "Bee Egg",
+			"Bee Egg",
 			"Star Caller"
 		},
 		Craft = {
 			"Primal Egg",
 			"Ancient Seed Pack",
+			"Bee Egg",
 			"Lightning Rod",
 			"Anti Bee Egg",
 		},
 		Shop = {
 			--"Traveler's Fruit",
 			"Summer Seed Pack",
-			"Hamster",
 			"Oasis Egg",
 			--"Delphinium",
 			"Lily of the Valley",
@@ -78,6 +78,7 @@ getgenv().ConfigsKaitun = {
 			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
+			"Lightning Rod",
 		},
 		Lock = {
 		},
@@ -86,33 +87,27 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Primal Egg",
-			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-                         "Bee Egg",
-			"Mythical Egg",
-			"Rare Egg",
-			"Rare Summer Egg",
-                         "Common Egg"
-
-            
+         "Bee Egg",
+        "Rare Summer Egg",
+			"Common Summer Egg",
+        "Common Egg"
 		},
 		Buy = {
-			"Primal Egg",
-			"Dinosaur Egg",
+						"Primal Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-                        "Bee Egg",
-			"Mythical Egg",
-			"Rare Egg",
-			"Rare Summer Egg",
-                        "Common Egg"
+         "Bee Egg",
+        "Rare Summer Egg",
+			"Common Summer Egg",
+        "Common Egg"
 		}
 	},
 
@@ -121,15 +116,15 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				"Starfish",
 			},
-			["Limit Upgrade"] = 2,
+			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
 				"Blood Kiwi",
 				"Rooster",
-				"Seal",
 			},
 		},
 		Locked = {
 			"T-Rex",
+			"Spinosaurus",
 			"Dragonfly",
 			"Night Owl",
 			"Queen Bee",
@@ -143,29 +138,17 @@ getgenv().ConfigsKaitun = {
 			"Red Fox",
 			"Blood Owl",
 			"Blood Kiwi",
-			"Brontosaurus",
-        "Triceratops",
-        "Toucan",
-        "Stegosaurus",
-        "Scarlet Macaw",
-        "Raptor",
-        "Petal Bee",
-        "Orangutan",
-        "Ostrich",
-        "Capybara",
-        "Red Giant Ant",
-        "Pterodactyl",
-        "Bear Bee"
+			["Blood Kiwi"] = 5,
 			["Rooster"] = 5,
 		},
-		LockPet_Weight = 8, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked,
 		Instant_Sell = {
 			"Dog",
 		}
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1392003712053940324/7mV9aT5qaj1x0rbEQKpeOC3T9QOA1SiR_4M1_LqeQWOADrhuEIU7a23oFouF4KfBJKM0",
+		UrlPet = "",
 		UrlSeed = "",
 		PcName = "PC",
 
@@ -194,7 +177,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
-			
