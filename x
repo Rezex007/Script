@@ -35,7 +35,7 @@ local function onPlayerAdded()
         if chatEvent then
             local sayMessageRequest = chatEvent:FindFirstChild("SayMessageRequest")
             if sayMessageRequest then
-                sayMessageRequest:FireServer("ไก่ตัน สุดคุ้ม wasabishop . xdnz . in . th", "All")
+                sayMessageRequest:FireServer("Hello", "All")
             end
         end
     end
