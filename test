@@ -1,55 +1,106 @@
+setfpscap(5)
 getgenv().ConfigsKaitun = {
+	["Stack Plant"] = true,
 	["Low Cpu"] = true,
-	
-	["Rejoin When Update"] = false,
 
+	["Rejoin When Update"] = false,
+	
 	["Limit Tree"] = {
 		["Limit"] = 300,
-		["Destroy Untill"] = 250,
-
+		["Destroy Untill"] = 300,
+		
 		["Safe Tree"] = {
-			"Moon Blossom"
+			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Horned Dinoshroom",
+			"Firefly Fern",
+			"Bone Blossom",
+			"Fossilight"
 		}
 	},
 
 	Seed = {
 		Buy = {
-			Mode = "Auto", -- Custom , Auto
+			Mode = "Custom", -- Custom , Auto
 			Custom = {
-				"Carrot",
+				"Tomato",
 				"Bamboo",
-				"Pumpkin",
-				"Daffodil",
-				"Orange Tulip",
+				"Carrot",
 				"Watermelon",
+				"Pumpkin",
 				"Mushroom",
-				"Nightshade",
 				"Beanstalk",
+				"Cacao",
+				"Pepper",
+				"Grape",
+				"Mango",    
+				"Dragon Fruit",
+				"Rose",
+				"Foxglove",
+				"Lilac",
+				"Ember Lily",
+				"Crocus",
+				"Succulent",
+				"Violet Corn",
+				"Bendboo",
+				"Cocovine",
+				"Cauliflower",
+				"Green Apple",
+				"Avocado",
+				"Banana",
+				"Pineapple",
+				"Kiwi",
+				"Bell Pepper",
+				"Prickly Pear",
+				"Loquat",
+				"Feijoa",
+				"Sugar Apple",
+				"Rafflesia",
+				"Pitcher",
+				"Wild Carrot",
+				"Pear",
+				"Cantaloupe",
+				"Parasol Flower",
+				"Rosy Delight",
+				"Liberty Lily",
+				"Firework Flower",
+				"Burning",
+				"Stonebite",
+				"Paradise Petal",
+				"Horned Dinoshroom",
+				"Boneboo",
+				"Firefly Fern",
+				"Fossilight",
 			}
 		},
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
-				"Carrot",
+
 			},
 			Lock = {
 				"Sunflower",
 				"Elephant Ears",
 				"Dragon Pepper",
-				"Bone Blossom"
+				"Pink Lily",
+				"Purple Dahlia",
+				"Honeysuckle",
+				"Bone Blossom",
+				"Fossilight"
 			}
 		}
 	},
-
+	
 	["Seed Pack"] = {
 		Locked = {
-
+			
 		}
 	},
-
+	
 	Events = {
 		Dino = true,
-		
+
 		["Traveling Shop"] = {
 			"Bald Eagle",
 			"Night Staff",
@@ -59,126 +110,134 @@ getgenv().ConfigsKaitun = {
 		Craft = {
 			"Primal Egg",
 			"Ancient Seed Pack",
-			"Bee Egg",
-			"Lightning Rod",
 			"Anti Bee Egg",
+			"Honeysuckle",
+			"Small Treat",
+			"Small Toy",
+			"Lightning Rod"
 		},
 		Shop = {
 			--"Traveler's Fruit",
 			"Summer Seed Pack",
+			"Flower Seed Pack",
+			--"Hamster",
+			"Bee Egg",
 			"Oasis Egg",
 			--"Delphinium",
-			--"Lily of the Valley",
+			"Lily of the Valley",
 		}
 	},
-
+	
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
-			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
+			"Basic Sprinkler",
 			"Lightning Rod",
+			"Medium Toy",
+			"Medium Treat",
+			"Levelup Lollipop",
 		},
 		Lock = {
+
 		},
 	},
 
 	Eggs = {
 		Place = {
 			"Primal Egg",
-			"Oasis Egg",
-			"Anti Bee Egg",
-			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-                        "Bee Egg",
-                        "Rare Summer Egg",
-                         "Common Summer Egg",
-                        "Common Egg"
-
+			"Anti Bee Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+			"Mythical Egg",
+			"Common Summer Egg",
+			"Rare Egg",
+			"Uncommon Egg",
+			"Common Egg"
 		},
 		Buy = {
 			"Primal Egg",
-			"Oasis Egg",
-			"Anti Bee Egg",
-			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-                        "Bee Egg",
-                        "Rare Summer Egg",
-                         "Common Summer Egg",
-                        "Common Egg"
+			"Anti Bee Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+			"Dinosaur Egg",
+			"Mythical Egg",
+			"Bee Egg",
+			"Common Summer Egg",
+			"Rare Egg",
+			"Uncommon Egg",
+			"Common Egg"
 		}
 	},
-
+	
 	Pets = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				"Starfish",
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 3,
 			["Equip When Done"] = {
+				"Bald Eagle",
 				"Blood Kiwi",
 				"Rooster",
+				"Chicken"
 			},
 		},
 		Locked = {
-			"T-Rex",
-			"Spinosaurus",
-			"Dragonfly",
-			"Night Owl",
-			"Queen Bee",
-			"Raccoon",
-			"Disco Bee",
-			"Fennec Fox",
 			"Disco Bee",
 			"Butterfly",
 			"Mimic Octopus",
 			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
 			"Red Fox",
-			"Blood Owl",
-			"Blood Kiwi",
-			["Blood Kiwi"] = 5,
-			["Rooster"] = 5,
+			"Fennec Fox",
+			"Bald Eagle",
+			"T-Rex",
+			"Brontosaurus",
+			"Spinosaurus",
+			"Dilophosaurus",
+			"Ankylosaurus",
+			"Capybara",
+			"Ostrich",
+			["Capybara"] = 5,
+			["Ostrich"] = 5,
+			["Bald Eagle"] = 4,
+			["Moon Cat"] = 10,
+			["Chicken"] = 2,
+			["Rooster"] = 4,
+			["Blood Kiwi"] = 4,
 		},
-		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {
-			"Dog",
+
 		}
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1391017562099421194/vVsMySJJs0kJri3ZLmDegR9e4nSPL_jDAB8r-Ls418Z0wFwBjIUODPj37Mg_nXmeEbDT",
-		UrlSeed = "https://discord.com/api/webhooks/1391017562099421194/vVsMySJJs0kJri3ZLmDegR9e4nSPL_jDAB8r-Ls418Z0wFwBjIUODPj37Mg_nXmeEbDT",
-		PcName = "PC",
-
+		UrlPet = "https://discord.com/api/webhooks/1381606117343236176/4Q8cTmYWSUUAfzCxJgc4cfP2km5a7ljvMgkBRuWmJraEcx2BwSR_HLziiHcGlu6KyzB-",
+		UrlSeed = "",
+		PcName = "Rezex",
+		
 		Noti = {
 			Seeds = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
+				"Idk",
 			},
 			SeedPack = {
 				"Idk",
 			},
 			Pets = {
-				"Dragonfly",
-				"Night Owl",
-				"Queen Bee",
-				"Raccoon",
-				"Disco Bee",
-				"Fennec Fox",
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Red Fox",
+
 			},
 			Pet_Weight_Noti = true,
 		}
 	},
 }
-
 License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
