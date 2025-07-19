@@ -1,6 +1,5 @@
-setfpscap(5)
+task.wait(10)
 getgenv().ConfigsKaitun = {
-	["Stack Plant"] = true,
 	["Low Cpu"] = true,
 
 	["Rejoin When Update"] = false,
@@ -13,9 +12,6 @@ getgenv().ConfigsKaitun = {
 			"Moon Blossom",
 			"Bone Blossom",
 			"Moon Melon",
-			"Horned Dinoshroom",
-			"Firefly Fern",
-			"Bone Blossom",
 			"Fossilight"
 		}
 	},
@@ -30,14 +26,11 @@ getgenv().ConfigsKaitun = {
 				"Watermelon",
 				"Pumpkin",
 				"Mushroom",
-				"Beanstalk",
 				"Cacao",
 				"Pepper",
 				"Grape",
 				"Mango",    
 				"Dragon Fruit",
-				"Rose",
-				"Foxglove",
 				"Lilac",
 				"Ember Lily",
 				"Crocus",
@@ -45,12 +38,10 @@ getgenv().ConfigsKaitun = {
 				"Violet Corn",
 				"Bendboo",
 				"Cocovine",
-				"Cauliflower",
 				"Green Apple",
 				"Avocado",
 				"Banana",
 				"Pineapple",
-				"Kiwi",
 				"Bell Pepper",
 				"Prickly Pear",
 				"Loquat",
@@ -72,6 +63,16 @@ getgenv().ConfigsKaitun = {
 				"Boneboo",
 				"Firefly Fern",
 				"Fossilight",
+				"Bone Blossom",
+				"Monoblooma",
+				"Serenity",
+				"Taro Flower",
+				"Zen Rocks",
+				"Hinomai",
+				"Maple Apple",
+				"Zenflare",
+				"Soft Sunshine",
+				"Spiked",
 			}
 		},
 		Place = {
@@ -85,9 +86,7 @@ getgenv().ConfigsKaitun = {
 				"Dragon Pepper",
 				"Pink Lily",
 				"Purple Dahlia",
-				"Honeysuckle",
-				"Bone Blossom",
-				"Fossilight"
+				"Honeysuckle"
 			}
 		}
 	},
@@ -99,8 +98,6 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Events = {
-		Dino = true,
-
 		["Traveling Shop"] = {
 			"Bald Eagle",
 			"Night Staff",
@@ -121,10 +118,16 @@ getgenv().ConfigsKaitun = {
 			"Summer Seed Pack",
 			"Flower Seed Pack",
 			--"Hamster",
-			"Bee Egg",
 			"Oasis Egg",
 			--"Delphinium",
-			"Lily of the Valley",
+			--"Lily of the Valley",
+			"Zen Seed Pack",
+			"Zen Egg",
+			--"Zenflare",
+			--"Soft Sunshine",
+			--"Koi",
+			--"Spiked Mango",
+			"Pet Shard Tranquil",
 		}
 	},
 	
@@ -133,11 +136,12 @@ getgenv().ConfigsKaitun = {
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Basic Sprinkler",
+            "Basic Sprinkler",
 			"Lightning Rod",
 			"Medium Toy",
 			"Medium Treat",
 			"Levelup Lollipop",
+			"Tanning Mirror"
 		},
 		Lock = {
 
@@ -146,6 +150,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Zen Egg",
 			"Primal Egg",
 			"Night Egg",
 			"Bug Egg",
@@ -154,21 +159,27 @@ getgenv().ConfigsKaitun = {
 			"Oasis Egg",
 			"Paradise Egg",
 			"Mythical Egg",
+			"Legendary Egg",
+			"Bee Egg",
+			"Rare Summer Egg",
 			"Common Summer Egg",
 			"Rare Egg",
 			"Uncommon Egg",
-			"Common Egg"
+			"Common Egg",
 		},
 		Buy = {
+			"Zen Egg",
 			"Primal Egg",
 			"Night Egg",
 			"Bug Egg",
 			"Anti Bee Egg",
+			"Dinosaur Egg",
 			"Oasis Egg",
 			"Paradise Egg",
-			"Dinosaur Egg",
 			"Mythical Egg",
+			"Legendary Egg",
 			"Bee Egg",
+			"Rare Summer Egg",
 			"Common Summer Egg",
 			"Rare Egg",
 			"Uncommon Egg",
@@ -177,16 +188,17 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Pets = {
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				"Starfish",
 			},
 			["Limit Upgrade"] = 3,
 			["Equip When Done"] = {
-				"Bald Eagle",
-				"Blood Kiwi",
-				"Rooster",
-				"Chicken"
+				"Capybara",
+				"Dilophosaurus",
+				"Ostrich",
+				"Starfish",
 			},
 		},
 		Locked = {
@@ -202,38 +214,59 @@ getgenv().ConfigsKaitun = {
 			"T-Rex",
 			"Brontosaurus",
 			"Spinosaurus",
-			"Dilophosaurus",
 			"Ankylosaurus",
-			"Capybara",
-			"Ostrich",
-			["Capybara"] = 5,
-			["Ostrich"] = 5,
-			["Bald Eagle"] = 4,
+			"Kitsune",
+			["Bald Eagle"] = 5,
 			["Moon Cat"] = 10,
 			["Chicken"] = 2,
 			["Rooster"] = 4,
-			["Blood Kiwi"] = 4,
+			["Blood Kiwi"] = 5,
+			["Ostrich"] = 5,
+			["Capybara"] = 5,
+			["Praying Mantis"] = 5,
+			["Scarlet Macaw"] = 5,
+			["Dilophosaurus"] = 5,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 5, -- if Weight >= 7 they will locked,
 		Instant_Sell = {
 
 		}
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1381606117343236176/4Q8cTmYWSUUAfzCxJgc4cfP2km5a7ljvMgkBRuWmJraEcx2BwSR_HLziiHcGlu6KyzB-",
-		UrlSeed = "",
-		PcName = "Rezex",
+		UrlPet = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
+		UrlSeed = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
+		PcName = "NEKO-1",
 		
 		Noti = {
 			Seeds = {
-				"Idk",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Honeysuckle",
+				"Bone Blossom",
+				"Fossilight",
+				"Maple Apple",
 			},
 			SeedPack = {
-				"Idk",
+				"Idk"
 			},
 			Pets = {
-
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
+				"Fennec Fox",
+				"Bald Eagle",
+				"T-Rex",
+				"Brontosaurus",
+				"Spinosaurus",
+				"Dilophosaurus",
+				"Ankylosaurus",
+				"Kitsune",
 			},
 			Pet_Weight_Noti = true,
 		}
