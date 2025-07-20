@@ -125,11 +125,14 @@ getgenv().ConfigsKaitun = {
 			"Zen Egg",
 			--"Zenflare",
 			--"Soft Sunshine",
-			--"Koi",
+			"Koi",
 			--"Spiked Mango",
 			"Pet Shard Tranquil",
-		}
+		},
+		Restocks_limit = 50000000,
+		MinimumChi = 10
 	},
+
 	
 	Gear = {
 		Buy = { 
@@ -192,6 +195,8 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				"Starfish",
+                                "Petal Bee",
+                                "Bee",
 			},
 			["Limit Upgrade"] = 3,
 			["Equip When Done"] = {
@@ -199,6 +204,11 @@ getgenv().ConfigsKaitun = {
 				"Dilophosaurus",
 				"Ostrich",
 				"Starfish",
+                                "Petal Bee",
+                                "Bee",
+                                "Honey Bee",
+
+
 			},
 		},
 		Locked = {
@@ -212,6 +222,7 @@ getgenv().ConfigsKaitun = {
 			"Fennec Fox",
 			"Bald Eagle",
 			"T-Rex",
+                        "Koi",
 			"Brontosaurus",
 			"Spinosaurus",
 			"Ankylosaurus",
@@ -227,7 +238,7 @@ getgenv().ConfigsKaitun = {
 			["Scarlet Macaw"] = 5,
 			["Dilophosaurus"] = 5,
 		},
-		LockPet_Weight = 5, -- if Weight >= 7 they will locked,
+		LockPet_Weight = 8, -- if Weight >= 7 they will locked,
 		Instant_Sell = {
 
 		}
@@ -236,7 +247,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
 		UrlSeed = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
-		PcName = "NEKO-1",
+		PcName = "Rezex",
 		
 		Noti = {
 			Seeds = {
