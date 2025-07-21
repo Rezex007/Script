@@ -119,7 +119,7 @@ getgenv().ConfigsKaitun = {
 			--"Summer Seed Pack",
 			--"Flower Seed Pack",
 			--"Hamster",
-			"Oasis Egg",
+			--"Oasis Egg",
 			--"Delphinium",
 			--"Lily of the Valley",
 			--"Zen Seed Pack",
@@ -162,9 +162,6 @@ getgenv().ConfigsKaitun = {
 			"Dinosaur Egg",
 			"Oasis Egg",
 			"Paradise Egg",
-			"Mythical Egg",
-			"Legendary Egg",
-			"Bee Egg",
 
 		},
 		Buy = {
@@ -176,9 +173,6 @@ getgenv().ConfigsKaitun = {
 			"Dinosaur Egg",
 			"Oasis Egg",
 			"Paradise Egg",
-			"Mythical Egg",
-			"Legendary Egg",
-			"Bee Egg",
 		}
 	},
 	
