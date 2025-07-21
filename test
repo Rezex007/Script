@@ -6,8 +6,8 @@ getgenv().ConfigsKaitun = {
 	["Rejoin When Update"] = false,
 	
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Untill"] = 300,
+		["Limit"] = 250,
+		["Destroy Untill"] = 200,
 		
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -165,11 +165,7 @@ getgenv().ConfigsKaitun = {
 			"Mythical Egg",
 			"Legendary Egg",
 			"Bee Egg",
-			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Rare Egg",
-			"Uncommon Egg",
-			"Common Egg",
+
 		},
 		Buy = {
 			"Zen Egg",
@@ -183,11 +179,6 @@ getgenv().ConfigsKaitun = {
 			"Mythical Egg",
 			"Legendary Egg",
 			"Bee Egg",
-			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Rare Egg",
-			"Uncommon Egg",
-			"Common Egg"
 		}
 	},
 	
