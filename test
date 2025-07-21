@@ -238,7 +238,7 @@ getgenv().ConfigsKaitun = {
 
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
-		UrlSeed = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
+		UrlSeed = "",
 		PcName = "Rezex",
 		
 		Noti = {
