@@ -6,8 +6,8 @@ getgenv().ConfigsKaitun = {
 	["Rejoin When Update"] = false,
 	
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Untill"] = 200,
+		["Limit"] = 150,
+		["Destroy Untill"] = 100,
 		
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -19,7 +19,7 @@ getgenv().ConfigsKaitun = {
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
+			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Tomato",
 				"Bamboo",
@@ -131,7 +131,7 @@ getgenv().ConfigsKaitun = {
 			--"Pet Shard Tranquil",
 		},
 		Restocks_limit = 50000000000,
-		MinimumChi = 50
+		MinimumChi = 10
 	},
 
 	
@@ -224,7 +224,7 @@ getgenv().ConfigsKaitun = {
 			["Scarlet Macaw"] = 5,
 			["Dilophosaurus"] = 5,
 		},
-		LockPet_Weight = 8, -- if Weight >= 7 they will locked,
+		LockPet_Weight = 7, -- if Weight >= 7 they will locked,
 		Instant_Sell = {
 
 		}
