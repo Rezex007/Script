@@ -1,54 +1,273 @@
-script_key="snEaFfkcxmvzaHStpEnpIHdiFTNyAHDp";
-setfpscap(3)
+setfpscap(5)
+task.wait(10)
+getgenv().ConfigsKaitun = {
+	["Low Cpu"] = true,
 
-getgenv().gagConfig = {
-    -- Event:
-    CRAFT_EVENT = { "Anti Bee Egg" },
-    BUY_TRAVELING_MERCHANT = { "Bee Egg" },
-    BUY_EVENT_SHOP = { "Zen Egg" },
-    MAX_EVENT_RESTOCK_SHECKLES = 5000000000,
-    
-    -- General:
-    AUTO_UPDATE_RESTART = true,
-    REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 5,
-    EXTRA_EGG_SLOTS = 5,
-    ADD_FRIEND = true,
-    OPEN_ALL_SEED_PACK = true,
+	["Rejoin When Update"] = false,
+	
+	["Limit Tree"] = {
+		["Limit"] = 150,
+		["Destroy Untill"] = 100,
+		
+		["Safe Tree"] = {
+			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Fossilight"
+		}
+	},
 
-    MAX_PLANTS = 200,
-    DESTROY_UNTIL_MIN_PLANTS = 180,
-    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry" },
-    
-    BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", },
-    PLANT_EGGS = { "Dinosaur Egg", "Zen Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg" },
-    
-    BUY_SEED_SHOP = { "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", "Coconut", "Bamboo", "Apple", "Pumpkin", "Watermelon", ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
-    KEEP_SEEDS = {},
-    KEEP_SEEDS_AFTER_MAX_PLANTS = { "Carrot", "Orange Tulip", "Tomato", "Daffodil", "Apple" },
-    
-    FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
-    SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
+	Seed = {
+		Buy = {
+			Mode = "Auto", -- Custom , Auto
+			Custom = {
+				"Tomato",
+				"Bamboo",
+				"Carrot",
+				"Watermelon",
+				"Pumpkin",
+				"Mushroom",
+				"Cacao",
+				"Pepper",
+				"Grape",
+				"Mango",    
+				"Dragon Fruit",
+				"Lilac",
+				"Ember Lily",
+				"Crocus",
+				"Succulent",
+				"Violet Corn",
+				"Bendboo",
+				"Cocovine",
+				"Green Apple",
+				"Avocado",
+				"Banana",
+				"Pineapple",
+				"Bell Pepper",
+				"Prickly Pear",
+				"Loquat",
+				"Feijoa",
+				"Sugar Apple",
+				"Rafflesia",
+				"Pitcher",
+				"Wild Carrot",
+				"Pear",
+				"Cantaloupe",
+				"Parasol Flower",
+				"Rosy Delight",
+				"Liberty Lily",
+				"Firework Flower",
+				"Burning",
+				"Stonebite",
+				"Paradise Petal",
+				"Horned Dinoshroom",
+				"Boneboo",
+				"Firefly Fern",
+				"Fossilight",
+				"Bone Blossom",
+				"Monoblooma",
+				"Serenity",
+				"Taro Flower",
+				"Zen Rocks",
+				"Hinomai",
+				"Maple Apple",
+				"Zenflare",
+				"Soft Sunshine",
+				"Spiked",
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
 
-    KEEP_PETS = { "Tanchozuru", "Kappa", "Kitsune", "Bald Eagle", "Dilophosaurus", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Seal", "Rooster", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Red Giant Ant", "Hyacinth Macaw", "Scarlet Macaw", "Axolotl", "Pack Bee", "Petal Bee", "Bear Bee", "Praying Mantis", "Caterpillar", "Giant Ant", "Snail", "Echo Frog", "Hamster", "Squirrel", "Brown Mouse", "Grey Mouse", "Blood Owl", "Cooked Owl", "Golden Bee", "Owl", "Firefly", "Chicken Zombie", ["Blood Kiwi"] = 2, ["Capybara"] = 1, ["Starfish"] = 1, ["Chicken"] = 2, ["Dog"] = 2, ["Bunny"] = 2, ["Golden Lab"] = 2 },
-    KEEP_PETS_WEIGHT = 10,
-    KEEP_PETS_AGE = 50,
+			},
+			Lock = {
+				"Sunflower",
+				"Elephant Ears",
+				"Dragon Pepper",
+				"Pink Lily",
+				"Purple Dahlia",
+				"Honeysuckle"
+			}
+		}
+	},
+	
+	["Seed Pack"] = {
+		Locked = {
+			
+		}
+	},
+	
+	Events = {
+		["Traveling Shop"] = {
+			"Bald Eagle",
+			"Night Staff",
+			"Bee Egg",
+			"Star Caller"
+		},
+		Craft = {
+			"Primal Egg",
+			"Ancient Seed Pack",
+			"Anti Bee Egg",
+			"Honeysuckle",
+			"Small Treat",
+			"Small Toy",
+			"Lightning Rod"
+		},
+		Shop = {
+			--"Traveler's Fruit",
+			--"Summer Seed Pack",
+			--"Flower Seed Pack",
+			--"Hamster",
+			--"Oasis Egg",
+			--"Delphinium",
+			--"Lily of the Valley",
+			--"Zen Seed Pack",
+			"Zen Egg",
+			--"Zenflare",
+			--"Soft Sunshine",
+			"Koi",
+			--"Spiked Mango",
+			--"Pet Shard Tranquil",
+		},
+		Restocks_limit = 50000000000,
+		MinimumChi = 10
+	},
 
-    EQUIP_PETS = { "Bald Eagle", ["Rooster"] = 2, ["Blood Kiwi"] = 2, ["Capybara"] = 1, ["Starfish"] = 1, ["Chicken"] = 2 },
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
-    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
+	
+	Gear = {
+		Buy = { 
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+            "Basic Sprinkler",
+			"Lightning Rod",
+			"Medium Toy",
+			"Medium Treat",
+			"Levelup Lollipop",
+			"Tanning Mirror"
+		},
+		Lock = {
 
-    BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
-    USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
+		},
+	},
 
-    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1391017564557021276/klBTdNG8yEzva70FDHbwY1JdI1SqWFuZhzVhDTrPMbJMPFuxmXTa4MpOUW9PLm1Y5FyA",
-    SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = {"Kitsune"},
-    NOTIFY_PETS_WEIGHT = 7,
-    DISCORD_ID = "887696519006941225",
-    WEBHOOK_NOTE = "Marmot",
-    SHOW_WEBHOOK_USERNAME = true,
-    SHOW_WEBHOOK_JOBID = true,
+	Eggs = {
+		Place = {
+			"Zen Egg",
+			"Primal Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Anti Bee Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+
+		},
+		Buy = {
+			"Zen Egg",
+			"Primal Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Anti Bee Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+		}
+	},
+	
+	Pets = {
+		["Start Delete Pet At"] = 40,
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				"Starfish",
+                                "Petal Bee",
+                                "Bee",
+			},
+			["Limit Upgrade"] = 3,
+			["Equip When Done"] = {
+				"Capybara",
+				"Dilophosaurus",
+				"Ostrich",
+				"Starfish",
+                                "Petal Bee",
+                                "Bee",
+                                "Honey Bee",
+
+
+			},
+		},
+		Locked = {
+			"Disco Bee",
+			"Butterfly",
+			"Mimic Octopus",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Red Fox",
+			"Fennec Fox",
+			"Bald Eagle",
+			"T-Rex",
+                        "Koi",
+			"Brontosaurus",
+			"Spinosaurus",
+			"Ankylosaurus",
+			"Kitsune",
+			["Bald Eagle"] = 5,
+			["Moon Cat"] = 10,
+			["Chicken"] = 2,
+			["Rooster"] = 4,
+			["Blood Kiwi"] = 5,
+			["Ostrich"] = 5,
+			["Capybara"] = 5,
+			["Praying Mantis"] = 5,
+			["Scarlet Macaw"] = 5,
+			["Dilophosaurus"] = 5,
+		},
+		LockPet_Weight = 7, -- if Weight >= 7 they will locked,
+		Instant_Sell = {
+
+		}
+	},
+
+	Webhook = {
+		UrlPet = "https://discord.com/api/webhooks/1396162683232845896/2CzT_mIG4hav6xBixxOv7LVoIQkuvlL0JLd_o8Ars2qpy3qU8GtrmINqbLyAP7B-XAzg",
+		UrlSeed = "",
+		PcName = "Rezex",
+		
+		Noti = {
+			Seeds = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Honeysuckle",
+				"Bone Blossom",
+				"Fossilight",
+
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
+				"Fennec Fox",
+				"Bald Eagle",
+				"T-Rex",
+				"Brontosaurus",
+				"Spinosaurus",
+				"Dilophosaurus",
+				"Ankylosaurus",
+				"Kitsune",
+			},
+			Pet_Weight_Noti = true,
+		}
+	},
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
