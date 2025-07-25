@@ -6,13 +6,13 @@ getgenv().gagConfig = {
     CRAFT_EVENT = { "Anti Bee Egg" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg"},
     BUY_EVENT_SHOP = { "Zen Egg"},
-    MAX_EVENT_RESTOCK_SHECKLES = 50000000000,
+    MAX_EVENT_RESTOCK_SHECKLES = 500000000000,
     
     -- General:
     AUTO_UPDATE_RESTART = true,
     REDEEM_CODES = {},
     EXTRA_PET_SLOTS = 5,
-    EXTRA_EGG_SLOTS = 6,
+    EXTRA_EGG_SLOTS = 8,
     ADD_FRIEND = true,
     OPEN_ALL_SEED_PACK = true,
 
@@ -35,7 +35,7 @@ getgenv().gagConfig = {
     KEEP_PETS_AGE = 50,
 
     EQUIP_PETS = { "Bald Eagle", ["Rooster"] = 2, ["Blood Kiwi"] = 2, ["Capybara"] = 1, ["Starfish"] = 1, ["Chicken"] = 2 },
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
+    USE_PETS_FOR_UPGRADE_SLOT = { "Capybara", "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
@@ -46,7 +46,7 @@ getgenv().gagConfig = {
     NOTIFY_PETS = {"Kitsune"},
     NOTIFY_PETS_WEIGHT = 7,
     DISCORD_ID = "887696519006941225",
-    WEBHOOK_NOTE = "Marmot",
+    WEBHOOK_NOTE = "คิสึเนะตัวร้าย",
     SHOW_WEBHOOK_USERNAME = true,
     SHOW_WEBHOOK_JOBID = true,
 }
