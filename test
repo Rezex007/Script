@@ -130,8 +130,8 @@ getgenv().ConfigsKaitun = {
 			--"Spiked Mango",
 			--"Pet Shard Tranquil",
 		},
-		Restocks_limit = 50000000000,
-		MinimumChi = 10
+		Restocks_limit = 500000000000,
+		MinimumChi = 100
 	},
 
 	
@@ -250,6 +250,7 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Kitsune",
+                               "Corrupted Kitsune"
 			},
 			Pet_Weight_Noti = true,
 		}
