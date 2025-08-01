@@ -2,6 +2,7 @@ setfpscap(3)
 task.wait(10)
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
+	Collect_Cooldown = 30, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 
@@ -208,6 +209,7 @@ getgenv().ConfigsKaitun = {
 				["Starfish"] = { 8, 75, 4 },
 			},
 		},
+		Favorite_LockedPet = true,
 		Locked_Pet_Age = 50, -- pet that age > 60 will lock
 		Locked = {
 			"Corrupted Kitsune",
@@ -254,7 +256,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1391017562099421194/vVsMySJJs0kJri3ZLmDegR9e4nSPL_jDAB8r-Ls418Z0wFwBjIUODPj37Mg_nXmeEbDT",
 		UrlSeed = "",
-		PcName = "Kitsune",
+		PcName = "Newconfig",
 
 		Noti = {
 			Seeds = {
