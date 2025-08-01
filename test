@@ -1,284 +1,57 @@
-setfpscap(3)
 task.wait(10)
-getgenv().ConfigsKaitun = {
-	["Block Pet Gift"] = true,
-	Collect_Cooldown = 30, -- cooldown to collect fruit
 
-	["Low Cpu"] = true,
+script_key="snEaFfkcxmvzaHStpEnpIHdiFTNyAHDp";
+setfpscap(3)
 
-	["Rejoin When Update"] = false,
-	
-	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Untill"] = 200,
-		
-		["Safe Tree"] = {
-			"Moon Blossom",
-			"Bone Blossom",
-			"Moon Melon",
-			"Maple Apple",
-			"Fossilight",
+getgenv().gagConfig = {
+    -- Event:
+    CRAFT_EVENT = { "Anti Bee Egg" },
+    BUY_TRAVELING_MERCHANT = { "Bee Egg" },
+    BUY_EVENT_SHOP = { "Zen Egg", "Raiju" },
+    MAX_EVENT_RESTOCK_SHECKLES = 5000000000000,
+    PLACE_ALL_EVENT_STAFF = true,
 
-			-- locked fruit for zen event
-			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
-			["Orange Tulip"] = 5, ["Corn"] = 5, ["Daffodil"] = 5,
-			["Bamboo"] = 5, ["Apple"] = 5, ["Coconut"] = 5,
-			["Pumpkin"] = 5, ["Watermelon"] = 5, ["Cactus"] = 5,
-			["Dragon Fruit"] = 5, ["Mango"] = 5, ["Grape"] = 5,
-			["Mushroom"] = 5, ["Pepper"] = 5, ["Cacao"] = 5
-		}
-	},
+    
+    -- General:
+    AUTO_UPDATE_RESTART = true,
+    REDEEM_CODES = {},
+    EXTRA_PET_SLOTS = 8,
+    EXTRA_EGG_SLOTS = 8,
+    ADD_FRIEND = false,
+    OPEN_ALL_SEED_PACK = true,
 
-	Seed = {
-		Buy = {
-			Mode = "Auto", -- Custom , Auto
-			Custom = {
-				"Tomato",
-				"Bamboo",
-				"Carrot",
-				"Watermelon",
-				"Pumpkin",
-				"Mushroom",
-				"Cacao",
-				"Pepper",
-				"Grape",
-				"Mango",    
-				"Dragon Fruit",
-				"Lilac",
-				"Ember Lily",
-				"Crocus",
-				"Succulent",
-				"Violet Corn",
-				"Bendboo",
-				"Cocovine",
-				"Green Apple",
-				"Avocado",
-				"Banana",
-				"Pineapple",
-				"Bell Pepper",
-				"Prickly Pear",
-				"Loquat",
-				"Feijoa",
-				"Sugar Apple",
-				"Rafflesia",
-				"Pitcher",
-				"Wild Carrot",
-				"Pear",
-				"Cantaloupe",
-				"Parasol Flower",
-				"Rosy Delight",
-				"Liberty Lily",
-				"Firework Flower",
-				"Burning",
-				"Stonebite",
-				"Paradise Petal",
-				"Horned Dinoshroom",
-				"Boneboo",
-				"Firefly Fern",
-				"Fossilight",
-				"Bone Blossom",
-				"Monoblooma",
-				"Serenity",
-				"Taro Flower",
-				"Zen Rocks",
-				"Hinomai",
-				"Maple Apple",
-				"Zenflare",
-				"Soft Sunshine",
-				"Spiked",
-			}
-		},
-		Place = {
-			Mode = "Lock", -- Select , Lock
-			Select = {
+    MAX_PLANTS = 250,
+    DESTROY_UNTIL_MIN_PLANTS = 200,
+    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
+    
+    BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", },
+    PLANT_EGGS = { "Dinosaur Egg", "Zen Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg" },
+    
+    BUY_SEED_SHOP = { "Elder Strawberry", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", ["Coconut"] = 50, ["Bamboo"] = 50, ["Apple"] = 50, ["Pumpkin"] = 50, ["Watermelon"] = 50, ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
+    KEEP_SEEDS = { "Bone Blossom" },
+    KEEP_SEEDS_AFTER_MAX_PLANTS = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
+   
+    FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
+    SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-			},
-			Lock = {
-				"Sunflower",
-				"Elephant Ears",
-				"Dragon Pepper",
-				"Pink Lily",
-				"Purple Dahlia",
-				"Honeysuckle",
-				"Maple Apple",
-				"Tranquil Bloom"
-			}
-		}
-	},
-	
-	["Seed Pack"] = {
-		Locked = {
-			
-		}
-	},
-	
-	Events = {
-		["Zen Event"] = {
-			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 250_000_000_000,
-				Minimum_Money = 5_000_000,
-				Minimum_Chi = 10
-			},
-			["Doing"] = {
-				Minimum_Money = 100_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 1,
-				Maximum_Chi = 100,
+    KEEP_PETS = { "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Koi", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Brontosaurus", "T-Rex", "Seal", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Hyacinth Macaw", "Pack Bee", "Petal Bee", "Bear Bee", "Hamster", "Blood Owl", "Cooked Owl", "Golden Bee", "Owl", "Firefly", "Chicken Zombie", ["Kodama"] = 6, ["Corrupted Kodama"] = 6, ["Blood Kiwi"] = 2, ["Capybara"] = 1, ["Starfish"] = 2, ["Chicken"] = 2, ["Rooster"] = 2, ["Tanchozuru"] = 5, ["Kappa"] = 5 },
+    KEEP_PETS_WEIGHT = {},
+    KEEP_PETS_AGE = {},
 
-				-- // thing to skip doing
-				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
-				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
-				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
-			}
-			}
-		},
-		["Traveling Shop"] = {
-			"Bald Eagle",
-			"Star Caller",
-			"Bee Egg"
-		},
-		Craft = {
-			"Anti Bee Egg",
-			"Primal Egg",
-			--"Ancient Seed Pack",
-			--"Honeysuckle",
-			"Small Treat",
-			"Small Toy",
-			"Lightning Rod"
-		},
-		Shop = {
-			"Zen Egg",
-			--"Zen Seed Pack",
-			--"Spiked Mango",
-			--"Pet Shard Tranquil",
-			--"Pet Shard Corrupted",
-			--"Koi",
-			--"Soft Sunshine",
-			--"Sakura Bush",
-			--"Raiju",
-		},
-		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
-	},
-	Gear = {
-		Buy = { 
-			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-            "Basic Sprinkler",
-			"Lightning Rod",
-			"Medium Toy",
-			"Medium Treat",
-			"Levelup Lollipop",
-			"Tanning Mirror"
-		},
-		Lock = {
+    EEQUIP_PETS = { "Bald Eagle", ["Kodama"] = 2, ["Corrupted Kodama"] = 2, ["Capybara"] = 1, ["Starfish"] = 1, ["Chicken"] = 2 },
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
+    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 
-		},
-	},
+    BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
+    USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
 
-	Eggs = {
-		Place = {
-			"Zen Egg",
-			"Primal Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Anti Bee Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
-			"Paradise Egg",
-
-		},
-		Buy = {
-			"Zen Egg",
-			"Primal Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Anti Bee Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
-			"Paradise Egg",
-		}
-	},
-	
-	Pets = {
-		["Start Delete Pet At"] = 40,
-		["Upgrade Slot"] = {
-			["Pet"] = {
-				["Starfish"] = { 8, 75, 1 },
-				["Kodama"] = { 8, 100, 2 },
-                ["Corrupted Kodama"] = { 8, 100, 2 },
-			},
-			["Limit Upgrade"] = 5,
-			["Equip When Done"] = {
-				["Tarantula Hawk"] = { 2, 101, 1 },
-				["Blood Kiwi"] = { 4, 101, 2 },
-				["Rooster"] = { 2, 101, 3 },
-				["Starfish"] = { 8, 75, 4 },
-			},
-		},
-		Favorite_LockedPet = true,
-		Locked_Pet_Age = 50, -- pet that age > 60 will lock
-		Locked = {
-			"Corrupted Kitsune",
-			"Kitsune",
-			"Kappa",
-			"Tanchozuru",
-			"Disco Bee",
-			"Butterfly",
-			"Queen Bee",
-			"Dragonfly",
-			"Raccoon",
-			"Red Fox",
-			"Mimic Octopus",
-			"Hyacinth Macaw",
-			"Brontosaurus",
-			"Dilophosaurus",
-			"Ankylosaurus",
-			"Spinosaurus",
-			"T-Rex",
-			"Mizuchi",
-			"Raiju",
-			"Corrupted Kodama",
-			["Tarantula Hawk"] = 2,
-			["Bald Eagle"] = 5,
-			["Moon Cat"] = 10,
-			["Chicken"] = 2,
-			["Rooster"] = 2,
-			["Blood Kiwi"] = 5,
-			["Ostrich"] = 5,
-			["Kappa"] = 5,
-			["Capybara"] = 5,
-			["Praying Mantis"] = 5,
-			["Starfish"] = 10,
-			["Nihonzaru"] = 5,
-			["Triceratops"] = 5,
-			["Bee"] = 3,
-		},
-		LockPet_Weight = 5, -- if Weight >= 7 they will locked,
-		Instant_Sell = {
-
-		}
-	},
-
-	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1391017562099421194/vVsMySJJs0kJri3ZLmDegR9e4nSPL_jDAB8r-Ls418Z0wFwBjIUODPj37Mg_nXmeEbDT",
-		UrlSeed = "",
-		PcName = "Newconfig",
-
-		Noti = {
-			Seeds = {
-				"Tranquil Bloom",
-
-			},
-			SeedPack = {
-				"Idk"
-			},
-			Pets = {
-				"Corrupted Kitsune",
-				"Kitsune",
-			},
-			Pet_Weight_Noti = true,
-		}
-	},
+    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1391017564557021276/klBTdNG8yEzva70FDHbwY1JdI1SqWFuZhzVhDTrPMbJMPFuxmXTa4MpOUW9PLm1Y5FyA",
+    SEED_WEBHOOK_URL = "", 
+    NOTIFY_PETS = {"Kitsune","Corrupted Kitsune"},
+    NOTIFY_PETS_WEIGHT = 7,
+    DISCORD_ID = "887696519006941225",
+    WEBHOOK_NOTE = "โนหนึ่ง",
+    SHOW_WEBHOOK_USERNAME = true,
+    SHOW_WEBHOOK_JOBID = true,
 }
-License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
