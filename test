@@ -1,35 +1,30 @@
 setfpscap(3)
-task.wait(5)
+task.wait(10)
 getgenv().ConfigsKaitun = {
-	["Block Pet Gift"] = false,
-	
-	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
-	
-	["Rejoin When Update"] = false,
-	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Untill"] = 150,
+	["Block Pet Gift"] = true,
 
+	["Low Cpu"] = true,
+
+	["Rejoin When Update"] = false,
+	
+	["Limit Tree"] = {
+		["Limit"] = 250,
+		["Destroy Untill"] = 200,
+		
 		["Safe Tree"] = {
-			"Tranquil Bloom",
-			"Maple Apple",
-			"Sunflower",
-			"Dragon Pepper",
-			"Elephant Ears",
-			"Moon Melon",
-			"Easter Egg",
-			"Moon Mango",
+			"Moon Blossom",
 			"Bone Blossom",
+			"Moon Melon",
+			"Maple Apple",
 			"Fossilight",
-      
+
 			-- locked fruit for zen event
-			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
-			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
-			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
-			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
-			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
-			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
+			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
+			["Orange Tulip"] = 5, ["Corn"] = 5, ["Daffodil"] = 5,
+			["Bamboo"] = 5, ["Apple"] = 5, ["Coconut"] = 5,
+			["Pumpkin"] = 5, ["Watermelon"] = 5, ["Cactus"] = 5,
+			["Dragon Fruit"] = 5, ["Mango"] = 5, ["Grape"] = 5,
+			["Mushroom"] = 5, ["Pepper"] = 5, ["Cacao"] = 5
 		}
 	},
 
@@ -37,75 +32,136 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
 			Custom = {
+				"Tomato",
+				"Bamboo",
 				"Carrot",
+				"Watermelon",
+				"Pumpkin",
+				"Mushroom",
+				"Cacao",
+				"Pepper",
+				"Grape",
+				"Mango",    
+				"Dragon Fruit",
+				"Lilac",
+				"Ember Lily",
+				"Crocus",
+				"Succulent",
+				"Violet Corn",
+				"Bendboo",
+				"Cocovine",
+				"Green Apple",
+				"Avocado",
+				"Banana",
+				"Pineapple",
+				"Bell Pepper",
+				"Prickly Pear",
+				"Loquat",
+				"Feijoa",
+				"Sugar Apple",
+				"Rafflesia",
+				"Pitcher",
+				"Wild Carrot",
+				"Pear",
+				"Cantaloupe",
+				"Parasol Flower",
+				"Rosy Delight",
+				"Liberty Lily",
+				"Firework Flower",
+				"Burning",
+				"Stonebite",
+				"Paradise Petal",
+				"Horned Dinoshroom",
+				"Boneboo",
+				"Firefly Fern",
+				"Fossilight",
+				"Bone Blossom",
+				"Monoblooma",
+				"Serenity",
+				"Taro Flower",
+				"Zen Rocks",
+				"Hinomai",
+				"Maple Apple",
+				"Zenflare",
+				"Soft Sunshine",
+				"Spiked",
 			}
 		},
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
-				"Carrot"
+
 			},
 			Lock = {
-				"Maple Apple",
 				"Sunflower",
-				"Dragon Pepper",
 				"Elephant Ears",
-				"Moon Melon",
-				"Moon Mango",
-				"Bone Blossom",
-				"Fossilight",
-				"Tranquil Bloom",
+				"Dragon Pepper",
+				"Pink Lily",
+				"Purple Dahlia",
+				"Honeysuckle",
+				"Maple Apple",
+				"Tranquil Bloom"
 			}
 		}
 	},
-
+	
 	["Seed Pack"] = {
 		Locked = {
-
+			
 		}
 	},
-
+	
 	Events = {
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000_000_000_000,
-				Minimum_Money = 50_000,
+				Max_Restocks_Price = 250_000_000_000,
+				Minimum_Money = 5_000_000,
 				Minimum_Chi = 10
 			},
 			["Doing"] = {
-				Minimum_Money = 50_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 7,
-				Maximum_Chi = 100,
+				Minimum_Money = 100_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 1,
+				Maximum_Chi = 400,
 			}
 		},
 		["Traveling Shop"] = {
-			"Bee Egg",
+			"Bald Eagle",
+			"Star Caller",
+			"Bee Egg"
 		},
 		Craft = {
 			"Anti Bee Egg",
-			"Small Toy",
+			"Primal Egg",
+			--"Ancient Seed Pack",
+			--"Honeysuckle",
 			"Small Treat",
-			"Ancient Seed Pack",
+			"Small Toy",
+			"Lightning Rod"
 		},
 		Shop = {
 			"Zen Egg",
-			"Raiju",
+			--"Zen Seed Pack",
+			--"Spiked Mango",
+			--"Pet Shard Tranquil",
+			--"Pet Shard Corrupted",
+			--"Koi",
+			--"Soft Sunshine",
+			--"Sakura Bush",
+			--"Raiju",
 		},
 		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
-
 	Gear = {
 		Buy = { 
-			"Harvest Tool",
-			"Friendship Pot",
 			"Master Sprinkler",
-			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
+            "Basic Sprinkler",
+			"Lightning Rod",
 			"Medium Toy",
 			"Medium Treat",
 			"Levelup Lollipop",
-			"Lightning Rod",
+			"Tanning Mirror"
 		},
 		Lock = {
 
@@ -115,36 +171,41 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Zen Egg",
-			"Anti Bee Egg",
-			"Bee Egg",
+			"Primal Egg",
 			"Night Egg",
 			"Bug Egg",
+			"Anti Bee Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
 			"Paradise Egg",
-			"Mythical Egg",
+
 		},
 		Buy = {
-			"Anti Bee Egg",
-			"Bee Egg",
+			"Zen Egg",
+			"Primal Egg",
 			"Night Egg",
 			"Bug Egg",
+			"Anti Bee Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
 			"Paradise Egg",
-			"Mythical Egg",
-
 		}
 	},
-
+	
 	Pets = {
-		["Start Delete Pet At"] = 50,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
+				["Starfish"] = { 8, 75, 1 },
 				["Kodama"] = { 8, 100, 2 },
-                                ["Corrupted Kodama"] = { 8, 100, 2 },
-				["Starfish"] = { 8, 100, 1 },
+                ["Corrupted Kodama"] = { 8, 100, 2 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				["Tanchozuru"] = { 5, 100, 1 },
-				["Ostrich"] = { 3, 100, 2 },
+				["Tarantula Hawk"] = { 2, 101, 1 },
+				["Blood Kiwi"] = { 4, 101, 2 },
+				["Rooster"] = { 2, 101, 3 },
+				["Starfish"] = { 8, 75, 4 },
 			},
 		},
 		Locked_Pet_Age = 50, -- pet that age > 60 will lock
@@ -153,7 +214,6 @@ getgenv().ConfigsKaitun = {
 			"Kitsune",
 			"Kappa",
 			"Tanchozuru",
-			"Tanuki",
 			"Disco Bee",
 			"Butterfly",
 			"Queen Bee",
@@ -161,32 +221,33 @@ getgenv().ConfigsKaitun = {
 			"Raccoon",
 			"Red Fox",
 			"Mimic Octopus",
+			"Hyacinth Macaw",
 			"Brontosaurus",
 			"Dilophosaurus",
 			"Ankylosaurus",
 			"Spinosaurus",
 			"T-Rex",
-			["Kodama"] = 5,
-			["Raiju"] = 5,
-			["Maneki-neko"] = 5,
-			["Seagull"] = 5,
-			["Shiba Inu"] = 5,
-			["Nihonzaru"] = 5,
-			["Stegosaurus"] = 5,
-			["Peacock"] = 5,
-			["Triceratops"] = 5,
-			["Pterodactyl"] = 2,
-			["Toucan"] = 5,
+			"Mizuchi",
+			"Raiju",
+			"Corrupted Kodama",
+			["Tarantula Hawk"] = 2,
+			["Bald Eagle"] = 5,
+			["Moon Cat"] = 10,
+			["Chicken"] = 2,
+			["Rooster"] = 2,
+			["Blood Kiwi"] = 5,
+			["Ostrich"] = 5,
+			["Kappa"] = 5,
 			["Capybara"] = 5,
-			["Bunny"] = 5,
-			["Golden Lab"] = 5,
+			["Praying Mantis"] = 5,
+			["Starfish"] = 10,
+			["Nihonzaru"] = 5,
+			["Triceratops"] = 5,
 			["Bee"] = 3,
-			["Bunny"] = 5,
-			["Golden Lab"] = 5,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 5, -- if Weight >= 7 they will locked,
 		Instant_Sell = {
-			"Shiba Inu",
+
 		}
 	},
 
@@ -212,5 +273,4 @@ getgenv().ConfigsKaitun = {
 	},
 }
 License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
