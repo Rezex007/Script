@@ -2,46 +2,35 @@ task.wait(5)
 setfpscap(3)
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
-	
+
+	Collect_Cooldown = 50, -- cooldown to collect fruit
+	JustFuckingCollectAll = true, -- Collect all (fruit not wait mutation)
+
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
-	
+
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Untill"] = 150,
+		["Limit"] = 300,
+		["Destroy Untill"] = 280,
 
 		["Safe Tree"] = {
-			"Tranquil Bloom",
-			"Maple Apple",
-			"Sunflower",
-			"Dragon Pepper",
-			"Elephant Ears",
-			"Moon Melon",
-			"Easter Egg",
-			"Moon Mango",
-			"Bone Blossom",
+			"Moon Blossom",
 			"Fossilight",
-      
-			-- locked fruit for zen event
-			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
-			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
-			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
-			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
-			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
-			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
 		}
 	},
 
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
-			Custom = {
+			Custom = { -- any fruit u need to place
+				"Carrot",
 			}
 		},
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
+				"Carrot"
 			},
 			Lock = {
 				"Maple Apple",
@@ -49,10 +38,10 @@ getgenv().ConfigsKaitun = {
 				"Dragon Pepper",
 				"Elephant Ears",
 				"Moon Melon",
+				"Easter Egg",
 				"Moon Mango",
 				"Bone Blossom",
 				"Fossilight",
-				"Tranquil Bloom",
 			}
 		}
 	},
@@ -64,54 +53,58 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
+		["Cook Event"] = {
+			Minimum_Money = 3_000_000, -- minimum money to start play this event
+		},
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 3_000_000_000_000,
-				Minimum_Money = 1_000_000,
-				Minimum_Chi = 20
+				Max_Restocks_Price = 50_000_000,
+				Minimum_Money = 10_000_000,
+				Minimum_Chi = 200
 			},
 			["Doing"] = {
-				Minimum_Money = 1_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 0,
-				Maximum_Chi = 9999,
+				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 4,
+				Maximum_Chi = 250,
+
+				-- // thing to skip doing
+				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
+				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
+				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
 			}
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
 		Craft = {
-			"Anti Bee Egg",
-			"Small Toy",
-			"Small Treat",
 			"Ancient Seed Pack",
+			"Anti Bee Egg",
+			"Primal Egg",
 		},
 		Shop = {
 			"Zen Egg",
+			"Zen Seed Pack",
+			"Spiked Mango",
 			"Pet Shard Tranquil",
-     			"Pet Shard Corrupted",
+			"Pet Shard Corrupted",
+			"Koi",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
 		},
 		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
 	},
 
 	Gear = {
 		Buy = { 
-			"Watering Can",
-			"Trowel",
-			"Recall Wrench",
-			"Magnifying Glass",
-			"Tanning Mirror",
-			"Cleaning Spray",
-			"Favorite Tool",
-			"Harvest Tool",
-			"Friendship Pot",
 			"Master Sprinkler",
-			"Basic Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Medium Toy",
-			"Medium Treat",
-			"Levelup Lollipop",
+			"Basic Sprinkler",
 			"Lightning Rod",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
 		},
 		Lock = {
 			"Master Sprinkler",
@@ -124,64 +117,77 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
-			"Paradise Egg",
 			"Night Egg",
 			"Bug Egg",
-			"Common Summer Egg",
-		},
-		Buy = {
-			"Anti Bee Egg",
 			"Paradise Egg",
 			"Bee Egg",
+			"Rare Summer Egg",
+			"Mythical Egg",
+
+		},
+		Buy = {
+			"Bee Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+			"Anti Bee Egg",
 			"Night Egg",
+			"Rare Summer Egg",
 			"Bug Egg",
-			"Common Summer Egg",
+			"Mythical Egg",
+
 		}
 	},
 
 	Pets = {
-		["Start Delete Pet At"] = 50,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Kodama"] = { 8, 100, 1 },
-				["Starfish"] = { 8, 100, 1 },
-                                ["Capybara"] = { 3, 100, 2 }, 
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 8,
 			["Equip When Done"] = {
-				["Tanchozuru"] = { 5, 100, 1 },
+				["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
 				["Ostrich"] = { 3, 100, 2 },
 				["Blood Kiwi"] = { 8, 100 },
 				["Seal"] = { 8, 100 },
 				["Rooster"] = { 8, 100 },
 				["Starfish"] = { 5, 75 },
 			},
+			},
 		},
 		Locked_Pet_Age = 75, -- pet that age > 60 will lock
 		Locked = {
-                        "Corrupted Kodama",
+			"French Fry Ferret",
+			"Spaghetti Sloth",
 			"Corrupted Kitsune",
 			"Raiju",
 			"Koi",
-                        "Kitsune",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
+			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
 			"Spinosaurus",
+			"Bear Bee",
 			"T-Rex",
-			"Dragonfly",
-			"Night Owl",
-			"Queen Bee",
-			"Raccoon",
-			"Disco Bee",
-			"Fennec Fox",
+			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
-			"Mimic Octopus",
 			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Fennec Fox",
+			"Mimic Octopus",
 			"Red Fox",
+			"Blood Owl",
 			["Tanchozuru"] = 4,
                         ["Ostrich"] = 4,
 			["Starfish"] = 5,
@@ -214,6 +220,8 @@ getgenv().ConfigsKaitun = {
 			Pets = {
 				"Corrupted Kitsune",
 				"Kitsune",
+                "French Fry Ferret",
+
 			},
 			Pet_Weight_Noti = true,
 		}
