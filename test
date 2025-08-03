@@ -1,4 +1,4 @@
-task.wait(5)
+
 setfpscap(3)
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
@@ -141,12 +141,6 @@ getgenv().ConfigsKaitun = {
 		Place = {
 			"Gourmet Egg",
 			"Zen Egg",
-            "Anti Bee Egg",
-			"Bee Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Mythical Egg",
 			"Common Summer Egg",
 		},
 		Buy = {
@@ -159,7 +153,7 @@ getgenv().ConfigsKaitun = {
 			"Rare Egg",
 			"Rare Summer Egg",
 			"Common Summer Egg",
-
+			"Common Egg",
 		}
 	},
  
@@ -213,27 +207,40 @@ getgenv().ConfigsKaitun = {
  
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1391017562099421194/vVsMySJJs0kJri3ZLmDegR9e4nSPL_jDAB8r-Ls418Z0wFwBjIUODPj37Mg_nXmeEbDT",
-		UrlSeed = "",
-		PcName = "Kitsune",
-
+        UrlSeed = "",
+        PcName = "ควยไร",
+ 
 		Noti = {
 			Seeds = {
 				"Tranquil Bloom",
-
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Bone Blossom",
+				"Dragon Sapling",
+				"Maple Apple",
 			},
 			SeedPack = {
 				"Idk"
 			},
 			Pets = {
+				"French Fry Ferret",
 				"Corrupted Kitsune",
 				"Kitsune",
-                "French Fry Ferret",
-
+				"Spinosaurus",
+				"T-Rex",
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Fennec Fox",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
 			},
 			Pet_Weight_Noti = true,
 		}
 	},
 }
 License = "E4s0OdlcjCLSsTHKGRoypwi2lUrcyLoB"
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
