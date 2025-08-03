@@ -147,10 +147,7 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Paradise Egg",
 			"Mythical Egg",
-			"Rare Egg",
-			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Common Egg",
+
 		},
 		Buy = {
 			"Anti Bee Egg",
@@ -172,7 +169,7 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				["Starfish"] = { 8, 100, 1 },
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 8,
 			["Equip When Done"] = {
 				["Tanchozuru"] = { 5, 100, 1 },
 				["Ostrich"] = { 3, 100, 2 },
