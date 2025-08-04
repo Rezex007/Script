@@ -41,7 +41,7 @@ getgenv().gagConfig = {
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1391017564557021276/klBTdNG8yEzva70FDHbwY1JdI1SqWFuZhzVhDTrPMbJMPFuxmXTa4MpOUW9PLm1Y5FyA",
     SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = {"Kitsune","Corrupted Kitsune"},
+    NOTIFY_PETS = {"Kitsune","Corrupted Kitsune", "French Fry Ferret"},
     NOTIFY_PETS_WEIGHT = 7,
     DISCORD_ID = "887696519006941225",
     WEBHOOK_NOTE = "โนหนึ่ง",
