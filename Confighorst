@@ -1,0 +1,21 @@
+repeat task.wait() until game:IsLoaded()
+
+getgenv().HorstConfig = {
+    ["EnableLog"] = true, -- ปรับเป็น true ถ้าอยากให้มันเช็คของ BF / GAG
+    ["Whitescreen"] = false,
+    ["EnableAddFriends"] = false,
+    ["LockFps"] = {
+        ["EnableLockFps"] = false,
+        ["LockFpsAmount"] = 30 
+    },
+    ["AutoFunctions"] = {
+        ["Enable"] = true, -- true if want to autochange account / พิม true เพื่อเปิดใช้งาน
+        ["99_Nights"] = { 
+            ["Diamonds"] = {
+                ["Enable"] = true,
+                ["Amount"] = 1500, -- 500, 999
+            }
+        }
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HorstSpaceX/last_update/refs/heads/main/on_loaded.lua"))()
